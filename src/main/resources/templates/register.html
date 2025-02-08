@@ -1,0 +1,36 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Twitter today</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="register-container">
+        <h2 class="h2-signup">Join Twitter today.</h2>
+        <form action="/auth/register" method="post">
+            <input type="text" name="username" placeholder="Full name" required>
+            <input type="email" name="email" placeholder="Phone or Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+
+            <!-- Gender Selection -->
+            <div class="gender-selection">
+                <label><input type="radio" name="gender" value="male" required> Male</label>
+                <label><input type="radio" name="gender" value="female" required> Female</label>
+            </div>
+            <button type="submit" class="signup-btn">Sign up</button>
+        </form>
+        <p th:if="${error}" th:text="${error}" class="error-message"></p>
+        <a th:href="@{/auth/login}">Login</a>
+        <p class="terms">
+            By signing up, you agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>, including <a href="#">Cookie Use</a>.
+        </p>
+        <p class="advanced-options">
+            <a href="#">Advanced options</a>
+        </p>
+    </div>
+</body>
+</html>
+<footer>
+    <p>&copy; 2024 Twitter Clone. Created by Harshita Arun</p>
+</footer>

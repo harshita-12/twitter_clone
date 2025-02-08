@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="container">
+        <!-- User Info -->
+        <div class="user-info">
+            <img th:src="${user.gender == 'female' ? '/images/avatar_girl.png' : '/images/avatar_boy.png'}" 
+     alt="User Avatar">
+            <h2><span th:text="${user.username}"></span>'s Profile</h2>
+        </div>
+        <!-- User Tweets -->
+        <h3>Your Tweets</h3>
+        <div class="tweet-container">
+            <div th:each="tweet : ${tweets}" class="tweet">
+                <!-- Avatar & Username -->
+                <div class="tweet-header">
+                    <img th:src="${tweet.user.gender == 'female' ? '/images/avatar_girl.png' : '/images/avatar_boy.png'}" 
+                         class="avatar" alt="User Avatar">
+                    <strong class="username" th:text="${tweet.user.username}"></strong>
+                </div>
+        
+                <!-- Tweet Content -->
+                <p class="tweet-content" th:text="${tweet.content}"></p>
+                <p class="tweet-timestamp" th:text="${tweet.timestamp}"></p>
+        
+                <!-- Retweet Indicator -->
+                <p th:if="${tweet.retweetId != null}" class="retweet">🔁 Retweeted</p>
+        
+                <!-- Retweet Button -->
+                <a th:href="@{/retweet/{id}(id=${tweet.id})}" class="retweet-btn">🔁 Retweet</a>
+            </div>
+        </div>
+        <p th:if="${error}" th:text="${error}" class="error-message"></p>
+    </div>
+    <nav>
+        <a th:href="@{/home}">Home</a> | 
+        <a th:href="@{/profile}">Profile</a> | 
+        <a th:href="@{/auth/logout}">Logout</a>
+    </nav>
+    <br><br><br><br><br>
+    
+</body>
+</html>
+<footer>
+    <p>&copy; 2024 Twitter Clone. Created by Harshita Arun</p>
+</footer>
