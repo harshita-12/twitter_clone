@@ -19,6 +19,48 @@ A simple Twitter clone built using Spring MVC, Java, Thymeleaf, HTML, CSS, and J
 .
 
 
+
+**🖥️ Pages & Their Functions**
+
+
+1️⃣ Home Page (home.html)
+
+
+🔹 Displays all tweets from users in a scrollable box
+
+🔹 Users can post new tweets
+
+🔹 Retweet option available
+
+<img width="1439" alt="home-page" src="https://github.com/harshita-12/twitter_clone/blob/main/preview/home_page.png">
+
+
+2️⃣ Login Page (login.html)
+
+🔹 Allows users to log in with their username and password
+
+🔹 Uses session handling for authentication
+
+<img width="1439" alt="login-page" src="https://github.com/harshita-12/twitter_clone/blob/main/preview/login_page.png">
+
+
+3️⃣ Sign-up Page (register.html)
+
+🔹 Users can sign up with name, email, password, and gender
+
+<img width="1439" alt="signup-page" src="https://github.com/harshita-12/twitter_clone/blob/main/preview/signup_page.png">
+
+
+
+4️⃣ Profile Page (profile.html)
+
+🔹 Displays user-specific tweets
+
+<img width="1439" alt="profile-page" src="https://github.com/harshita-12/twitter_clone/blob/main/preview/profile_page.png">
+
+ .
+
+ 
 **📂 Project Structure**
 
 twitter-clone/
@@ -40,45 +82,6 @@ twitter-clone/
 
 
 .
-
-
-**🖥️ Pages & Their Functions**
-
-
-1️⃣ Home Page (home.html)
-
-
-🔹 Displays all tweets from users in a scrollable box
-
-🔹 Users can post new tweets
-
-🔹 Retweet option available
-
-
-2️⃣ Login Page (login.html)
-
-🔹 Allows users to log in with their username and password
-
-🔹 Uses session handling for authentication
-
-
-3️⃣ Registration Page (register.html)
-
-🔹 Users can sign up with name, email, password, and gender
-
-🔹 Gender selection determines the avatar image
-
-
-
-4️⃣ Profile Page (profile.html)
-
-🔹 Displays user-specific tweets
-
-🔹 Shows username & avatar based on gender
-
-🔹 Provides logout option
-
- .
  
 **Created by Harshita Arun**
 
